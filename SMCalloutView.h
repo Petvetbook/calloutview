@@ -59,6 +59,8 @@ extern NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView;
 @property (nonatomic, assign) UIEdgeInsets constrainedInsets;
 /// default is @c SMCalloutMaskedBackgroundView, or @c SMCalloutDrawnBackgroundView when using @c SMClassicCalloutView
 @property (nonatomic, strong) SMCalloutBackgroundView *backgroundView;
+/// Dispense with the round corners
+@property (nonatomic) BOOL useSquareCorners;
 
 /**
  @brief Custom title view.
@@ -154,6 +156,7 @@ extern NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView;
 /// Default for iOS 7, this reproduces the "masked" behavior of the iOS 7-style callout view.
 /// Accessories are masked by the shape of the callout (including the arrow itself).
 @interface SMCalloutMaskedBackgroundView : SMCalloutBackgroundView
+@property (nonatomic) BOOL useSquareCorners;
 @end
 
 //
